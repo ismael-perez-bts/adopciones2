@@ -1,0 +1,18 @@
+p{
+   width: 30%;
+   text-align: justify;
+}
+
+button{
+    border-radius: 100px;
+    background-color:transparent;
+    border: solid 1px white;
+    color:white;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 15px;
+}
+button:hover{
+    font-weight: bold;
+    border: solid 2px white;
+}

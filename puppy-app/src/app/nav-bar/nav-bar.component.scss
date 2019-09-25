@@ -1,0 +1,51 @@
+.float-left{
+    float:left;
+    height: 50px;
+}
+.float-left:hover{
+    background-color: rgba(0,0,0,.5);
+}
+a{
+    text-decoration: none;
+    color:white;
+    float: right;
+    padding:20px;
+    box-sizing: border-box;
+    height: 50px;
+}
+nav{
+    height: 50px;
+    position:fixed;
+    background-color:rgba(0,0,0,.2);
+    color:white;
+    top:0;
+    left:0;
+    width: 100%;
+    padding-top: 0;
+    
+}
+.logo{
+    height: 30px;
+    height: 30px;
+    padding-bottom: 10px;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+li{
+    display: inline-block;
+}
+.enlaces-derecha li:hover{
+    background-color: rgba(0,0,0,.5);
+}
+li img{
+    color:white;
+   
+}
+svg{
+    height: 20px;
+}
