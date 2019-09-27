@@ -1,6 +1,7 @@
 p{
    width: 30%;
    text-align: justify;
+   font-weight: bold;
 }
 
 button{
@@ -11,8 +12,18 @@ button{
     padding: 10px;
     box-sizing: border-box;
     margin-right: 15px;
+    width:200px;
+    font-weight: bold;
 }
 button:hover{
-    font-weight: bold;
     border: solid 2px white;
+    background-color: rgba(0,0,0,0.5);
+}
+button:active{
+    border:none;
+}
+
+.container{
+    margin-top:220px;
+    margin-left:100px;
 }
