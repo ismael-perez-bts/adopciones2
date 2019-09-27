@@ -28,6 +28,7 @@ nav{
     height: 30px;
     height: 30px;
     padding-bottom: 10px;
+    color:white;
 }
 
 ul{
@@ -48,4 +49,50 @@ li img{
 }
 svg{
     height: 20px;
+}
+
+.check{
+    display:none;
+}
+.menu{
+    float: right;
+    display:none;
+}
+.red{
+    display: none;
+}
+@media (max-width:1024px){
+    .enlaces-derecha{
+        width: 100%;
+        height: 100%;
+        margin:0;
+        padding: 0;
+        transition: all 0.5s;
+        transform: translateX(-100%);
+    }
+    .enlaces-derecha li{
+        display:block;
+        width: 100%;
+        background-color: rgba(0,0,0,0.9);
+        border:solid 1px #37474f;
+        height:70px;
+    }
+    .enlaces-derecha li a{
+        display: block;
+        width:100%;
+    }
+    .enlaces-derecha li:hover{
+        background-color: rgba(0,0,0,.8);
+        box-shadow:inset 0 0 10px white;
+    }
+    .menu{
+        display: inherit;
+    }
+    #check:checked ~ .enlaces-derecha{
+        transform: translateX(0%);
+    }
+    .red{
+        display: inline-block;
+        margin-left:6px;
+    }
 }
