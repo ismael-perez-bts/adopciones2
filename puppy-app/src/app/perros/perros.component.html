@@ -1,0 +1,8 @@
+<div class="containersas text-center">
+    <div class="row mt-5">
+        <div *ngFor="let dog of dogs$ | async; let i = index">
+            <app-perro [dog]="dog"></app-perro>
+            {{dog.name}}
+        </div>
+    </div>
+</div>
