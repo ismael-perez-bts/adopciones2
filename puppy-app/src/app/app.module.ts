@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PerrosComponent } from './perros/perros.component';
 import { PerroComponent } from './perro/perro.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,12 +19,15 @@ import { PerroComponent } from './perro/perro.component';
     HomeComponent,
     NavBarComponent,
     PerrosComponent,
-    PerroComponent
+    PerroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
