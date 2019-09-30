@@ -22,4 +22,13 @@ export class ApiDogService {
       })
     );
   }
+  addDog (dog: Dog): Observable<Dog> {
+    return this.http.post<Dog>(`${environment.apiUrl}/`, dog)
+    .pipe(
+      catchError( (err) =>{
+        alert('There was an error')
+        return of(err);
+      })
+    );
+  }
 }

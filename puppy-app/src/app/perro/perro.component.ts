@@ -9,9 +9,16 @@ import { Dog } from '../models/dogs';
 export class PerroComponent implements OnInit {
 
   @Input() dog:Dog;
+  // const edad:boolean;
   constructor() { }
 
   ngOnInit() {
   }
-
+  ngYears(year:number):string{
+    if(year > 1){
+      return year + " años"
+    }else{
+      return year + " año";
+    }
+  }
 }
