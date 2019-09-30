@@ -22,7 +22,7 @@ nav{
     left:0;
     width: 100%;
     padding-top: 0;
-    
+    z-index: 1;
 }
 .logo{
     height: 30px;
@@ -94,5 +94,8 @@ svg{
     .red{
         display: inline-block;
         margin-left:6px;
+    }
+    nav{
+        background-color: #000;
     }
 }

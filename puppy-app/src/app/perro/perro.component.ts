@@ -9,7 +9,6 @@ import { Dog } from '../models/dogs';
 export class PerroComponent implements OnInit {
 
   @Input() dog:Dog;
-  const edad:boolean;
   constructor() { }
 
   ngOnInit() {
