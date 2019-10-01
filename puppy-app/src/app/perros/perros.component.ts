@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { Dog } from '../models/dogs';
 import { ApiDogService } from '../api-dog.service';
 import { Observable } from 'rxjs';
@@ -9,12 +9,18 @@ import { Observable } from 'rxjs';
   styleUrls: ['./perros.component.scss'],
   providers: [ApiDogService]
 })
+
 export class PerrosComponent implements OnInit {
 
   public dogs$: Observable<Dog[]>;
   constructor(private dogService: ApiDogService) {
     this.dogs$ = this.dogService.getDogs();
     // console.log(this.dogs$);
+  }
+  
+  // propagar = new EventEmitter<string>();
+  elimi(e){
+    this.dogs$ = this.dogService.getDogs();
   }
   ngOnInit() {
   }

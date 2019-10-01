@@ -7,7 +7,7 @@
 .card{
     padding: 0;
     margin: 0;
-    height: 315px;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.733);
     img{
         width: 100%;
@@ -16,13 +16,15 @@
     }
 }
 .card-body{
+    padding: 0;
+    height: 180px;
     p{
         text-align: left;
     }
 }
 @media (min-width:768px) and (max-width:970px){
     .card{
-        height: 330px;
+        height: 370px;
     }
     .card-body{
         font-size: 14px;
