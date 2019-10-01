@@ -23,8 +23,10 @@ export class PerroComponent implements OnInit {
   
   @Output() propagar = new EventEmitter();
   eliminar(dog:Dog):void{
-    this.dogservice.deleteDogs(dog).subscribe();
-    this.propagar.emit('algodon');
+    this.dogservice.deleteDogs(dog).subscribe(()=>{
+      this.propagar.emit('algodon');
+    });
+   
   }
 
   ngYears(year:number):string{
