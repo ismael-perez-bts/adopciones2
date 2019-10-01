@@ -13,7 +13,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  cambiarVista(){
+  redirigirAdoptar(){
     this.route.navigateByUrl('adoptar');
   }
+  redirigirAgregar(){
+    this.route.navigateByUrl('agregar');
+  }
+  
 }
