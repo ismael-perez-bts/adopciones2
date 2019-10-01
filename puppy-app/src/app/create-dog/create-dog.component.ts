@@ -24,7 +24,6 @@ export class CreateDogComponent implements OnInit {
 
   submit():void{
     let form = this.formDog;
-    //console.log(form.value)
     if(!form.valid){
       alert('Datos no validos')
       return
@@ -35,7 +34,7 @@ export class CreateDogComponent implements OnInit {
 
   private submitData(form:Dog):void{
     this.apiDogService.addDog(form).subscribe(data=>{
-      
+      this.route.navigateByUrl('adoptar');
     })
   }
 

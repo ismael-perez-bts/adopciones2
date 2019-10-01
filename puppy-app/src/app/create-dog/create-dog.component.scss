@@ -1,3 +1,25 @@
 .container{
-    color:black;
+    width: auto;
+    
+}
+.card{
+    background-color:rgba(0,0,0,0.9);
+    justify-items: center;
+}
+.card-body{
+    padding-left:16%;
+    box-sizing: border-box;
+}
+.radio{
+margin: 0 20px 0 10px;
+}
+
+.width-auto{
+    width: auto;
+}
+.div-boton{
+    padding-left:30%;
+}
+h3{
+    padding-left: 25%;
 }
