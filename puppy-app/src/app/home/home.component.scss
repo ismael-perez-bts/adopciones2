@@ -27,3 +27,34 @@ button:active{
     margin-top:220px;
     margin-left:100px;
 }
+@media (max-width:1024px){
+    p{
+        width: 50%;
+     }
+     .container{
+        margin-top:0px;
+        margin-left:0px;
+    }
+    body{
+        background-size:100% auto;
+        background-position-y:50px;
+        background-color:black;
+    }
+}
+@media (max-width:720px){
+    p{
+        width: 50%;
+     }
+     .container{
+        margin-top:0px;
+        margin-left:0px;
+    }
+    .botones{
+        margin-top:200px;
+        margin-left:20%;
+        button{
+            display: block;
+            margin-top:20px
+        }
+    }
+}

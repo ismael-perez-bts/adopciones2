@@ -10,6 +10,7 @@ import { PerrosComponent } from './perros/perros.component';
 import { PerroComponent } from './perro/perro.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { CreateDogComponent } from './create-dog/create-dog.component';
 
 
 
@@ -20,7 +21,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     NavBarComponent,
     PerrosComponent,
     PerroComponent,
-    LoginComponent
+    LoginComponent,
+    CreateDogComponent
   ],
   imports: [
     BrowserModule,

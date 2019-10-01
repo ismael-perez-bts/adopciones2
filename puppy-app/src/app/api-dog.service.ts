@@ -17,7 +17,17 @@ export class ApiDogService {
     return this.http.get<Dog[]>(`${environment.apiUrl}/`)
     .pipe(
       catchError( (err) =>{
-        alert('There was an error')
+        alert('Ocurrió un error')
+        return of(err);
+      })
+    );
+  }
+  addDog (dog: Dog): Observable<Dog> {
+    console.log(dog)
+    return this.http.post<Dog>(`${environment.apiUrl}/`, dog)
+    .pipe(
+      catchError( (err) =>{
+        alert('Ocurrió un error')
         return of(err);
       })
     );
