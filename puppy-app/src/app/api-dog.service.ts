@@ -32,9 +32,11 @@ export class ApiDogService {
       })
     );
   }
+  
   deleteDogs(dog:Dog): Observable<Dog[]>{
     const id:number = dog.id;
     // console.log();
     return this.http.delete<Dog[]>(`${environment.apiUrl}/${id}`);
   }
+
 }
