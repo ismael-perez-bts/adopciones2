@@ -3,11 +3,12 @@
         <div class="col-md-4">
             <div class="card p-3 mt-5">
                 <h5 class="card-title">Log-In</h5>
-                <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginData)">
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
                     <input type="text" placeholder="e-mail" formControlName="email" class="w-100 p-1 form-control"/>
                     <input type="password" placeholder="password" formControlName="password" class="w-100 mt-2 p-1 form-control"/>
                     <button class="btn btn-primary mt-2 w-100">Login</button>
                 </form>
+                <button class="btn btn-success mt-2" (click)="redirectSignUp()">Registrate</button>
             </div>
         </div>
     </div>

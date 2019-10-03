@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { Dog } from './models/dogs';
 import { catchError } from 'rxjs/operators'
+import { User } from './models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -39,4 +40,7 @@ export class ApiDogService {
     return this.http.delete<Dog[]>(`${environment.apiUrl}/${id}`);
   }
 
+  createUser(user:User){
+    return this.http.post<User>(`${environment.apiUrl}/user`,user)
+  }
 }
