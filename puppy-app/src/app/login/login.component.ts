@@ -20,20 +20,25 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     // this.loginForm.setValue({ ...this.loginForm.value, email: "cri@hotm.com" });
   }
+  //falta
+  
   onLogin() {
     if (this.loginForm.valid) {
-      this.route.navigateByUrl('home');
+      this.loginService.login(this.loginForm).subscribe((token: string) => {
+        localStorage.setItem('auth', token)
+        this.route.navigateByUrl('home');
+      })
     } else {
       alert('Wrong credentials!');
     }
   }
-  onSignUp() {
-    this.loginService.login({ username: 'bla', password: '123' }).subscribe((token: string) => {
-      localStorage.setItem('auth', token)
-      this.route.navigate(['login'])
-    })
-  }
-  redirectSignUp(){
-    this.route.navigate(['signUp'])
-  }
+  // onSignUp() {
+  //   this.loginService.login({ username: 'bla', password: '123' }).subscribe((token: string) => {
+  //     localStorage.setItem('auth', token)
+  //     this.route.navigate(['login'])
+  //   })
+  // }
+  // redirectSignUp(){
+  //   this.route.navigate(['signUp'])
+  // }
 }

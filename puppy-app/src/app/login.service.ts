@@ -15,7 +15,7 @@ export class LoginService{
         return this.http.post('/login',credentials);
     }
     isLoggedIn(){
-        const token = localStorage.getItem('auth')
-        return !!token
+        const token = localStorage.getItem('auth');
+        return !!token;
     }
 }
