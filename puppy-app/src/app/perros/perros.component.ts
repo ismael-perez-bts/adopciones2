@@ -22,7 +22,9 @@ export class PerrosComponent implements OnInit {
   
   // propagar = new EventEmitter<string>();
   elimi(e){
-    this.dogs$ = this.dogService.getDogs();
+    this.dogService.getDogs().subscribe((obj:Response)=>{
+      this.dogs$ = obj;
+    });
   }
   ngOnInit() {
   }
