@@ -13,11 +13,11 @@ export class CreatePersonComponent implements OnInit {
 
   
   signUpForm: FormGroup = new FormGroup({
-    firstName: new FormControl('cris',Validators.required),
-    lastName: new FormControl('hum',Validators.required),
-    email: new FormControl('cris@hum.com', [Validators.email, Validators.required]),
-    password: new FormControl('123456', Validators.required),
-    validatePassword: new FormControl('123456', Validators.required)
+    firstName: new FormControl('',Validators.required),
+    lastName: new FormControl('',Validators.required),
+    email: new FormControl('', [Validators.email, Validators.required]),
+    password: new FormControl('', Validators.required),
+    validatePassword: new FormControl('', Validators.required)
   });
 
   constructor(private route: Router,private api:ApiDogService ) { }

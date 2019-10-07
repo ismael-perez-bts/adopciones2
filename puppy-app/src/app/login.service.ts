@@ -8,10 +8,6 @@ import {Observable} from 'rxjs'
 export class LoginService{
     constructor(private http:HttpClient){}
     login(credentials:object){
-        // this.http.post('http://localhost:5000/api/user/login',credentials).subscribe((obj:object) =>{
-        //     localStorage.setItem('auth', JSON.stringify(obj.data.token));
-        // });
-
          return this.http.post('http://localhost:5000/api/user/login',credentials);
     }
     isLoggedIn(){

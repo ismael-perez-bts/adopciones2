@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { CreateDogComponent } from './create-dog/create-dog.component';
 import { LoginService } from './login.service';
 import { AuthGuard} from './auth.guard';
 import { CreatePersonComponent } from './create-person/create-person.component'
+import { ApiDogService } from './api-dog.service';
 
 
 @NgModule({
