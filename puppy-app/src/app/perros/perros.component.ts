@@ -2,6 +2,7 @@ import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { Dog } from '../models/dogs';
 import { ApiDogService } from '../api-dog.service';
 import { Observable } from 'rxjs';
+import {Response} from '../models/Response'
 
 @Component({
   selector: 'app-perros',
@@ -12,10 +13,11 @@ import { Observable } from 'rxjs';
 
 export class PerrosComponent implements OnInit {
 
-  public dogs$: Observable<Dog[]>;
+  public dogs$: Observable<Response>;
   constructor(private dogService: ApiDogService) {
-    this.dogs$ = this.dogService.getDogs();
-    // console.log(this.dogs$);
+     this.dogService.getDogs().subscribe((obj:Response)=>{
+      this.dogs$ = obj;
+    });
   }
   
   // propagar = new EventEmitter<string>();

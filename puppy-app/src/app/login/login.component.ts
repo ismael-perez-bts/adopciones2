@@ -30,7 +30,11 @@ export class LoginComponent implements OnInit {
       this.loginService.login(this.loginForm.value).subscribe((obj:object) => {
         const token = JSON.stringify(obj.data.token);
         localStorage.setItem('auth', token);
-        this.route.navigateByUrl('home');
+        if(localStorage.getItem('auth')!==""){
+          this.route.navigateByUrl('home');
+        }else{
+          alert('Wrong credentials!');
+        }
       })
     } else {
       alert('Wrong credentials!');

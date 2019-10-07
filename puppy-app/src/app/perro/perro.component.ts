@@ -10,9 +10,7 @@ import { ApiDogService } from '../api-dog.service';
 })
 export class PerroComponent implements OnInit {
 
-  form: FormGroup = new FormGroup({
-    id: new FormControl('')
-  });
+ 
 
   @Input() dog:Dog;
   // const edad:boolean;
@@ -22,8 +20,10 @@ export class PerroComponent implements OnInit {
   }
   
   @Output() propagar = new EventEmitter();
+
   eliminar(dog:Dog):void{
-    this.dogservice.deleteDogs(dog).subscribe(()=>{
+    this.dogservice.deleteDogs(dog).subscribe((obj:object)=>{
+      (obj)
       this.propagar.emit('algodon');
     });
    

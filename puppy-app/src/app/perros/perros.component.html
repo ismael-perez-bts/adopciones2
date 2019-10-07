@@ -1,6 +1,6 @@
 <div class="containersas text-center">
     <div class="row mt-5">
-        <div class="col-md-4" *ngFor="let dog of dogs$ | async; let i = index">
+        <div class="col-md-4" *ngFor="let dog of dogs$.data; let i = index">
             <app-perro [dog]="dog" (propagar)="elimi($event)"></app-perro>
         </div>
     </div>

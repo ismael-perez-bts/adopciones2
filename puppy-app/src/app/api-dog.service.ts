@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { Dog } from './models/dogs';
 import { catchError } from 'rxjs/operators'
 import { User } from './models/user';
+import {Response} from './models/Response'
 
 @Injectable({
   providedIn: 'root'
@@ -14,18 +15,17 @@ export class ApiDogService {
   constructor(private http: HttpClient) {
 
   }
-  getDogs(): Observable<Dog[]>{
-    return this.http.get<Dog[]>(`${environment.apiUrl}getDogs`)
-    .pipe(
-      catchError( (err) =>{
-        alert('Ocurrió un error')
-        return of(err);
-      })
-    );
+  getDogs(): Observable<Response>{
+    return this.http.get<Response>(`${environment.apiUrl}dog/getDogs`)
+     .pipe(
+       catchError( (err) =>{
+         alert('Ocurrió un error')
+         return of(err);
+       })
+     );
   }
-  addDog (dog: Dog): Observable<Dog> {
-    console.log(dog)
-    return this.http.post<Dog>(`${environment.apiUrl}addDog`, dog)
+  addDog (dog: Dog): Observable<Response> {
+    return this.http.post<Response>(`${environment.apiUrl}dog/addDog`, dog)
     .pipe(
       catchError( (err) =>{
         alert('Ocurrió un error')
@@ -34,10 +34,9 @@ export class ApiDogService {
     );
   }
   
-  deleteDogs(dog:Dog): Observable<Dog[]>{
-    const id:number = dog.id;
-    // console.log();
-    return this.http.delete<Dog[]>(`${environment.apiUrl}/${id}`);
+  deleteDogs(dog:Dog): Observable<Response>{
+     const name:string = dog.name;
+    return this.http.delete<Response>(`${environment.apiUrl}dog/deleteDog/${name}`);
   }
 
   createUser(user:User){
