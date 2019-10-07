@@ -27,8 +27,7 @@ export class CreatePersonComponent implements OnInit {
   }
    private submitData(signUpForm:User){
      if(this.signUpForm.valid){
-       console.log(this.signUpForm.value);
-       this.api.createUser(signUpForm).subscribe(()=>{
+       this.api.createUser(this.signUpForm.value).subscribe(()=>{
          this.route.navigateByUrl('');
        })
      } else {
