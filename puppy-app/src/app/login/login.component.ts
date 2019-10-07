@@ -28,9 +28,10 @@ export class LoginComponent implements OnInit {
   onLogin() {
     if (this.loginForm.valid) {
       this.loginService.login(this.loginForm.value).subscribe((obj:object) => {
-        const token = JSON.stringify(obj.data.token);
-        localStorage.setItem('auth', token);
-        if(localStorage.getItem('auth')!==""){
+        // console.log(obj);
+        if(obj.status === "success"){
+          const token = JSON.stringify(obj.data.token);
+          localStorage.setItem('auth', token);
           this.route.navigateByUrl('home');
         }else{
           alert('Wrong credentials!');
