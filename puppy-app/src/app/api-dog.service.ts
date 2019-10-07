@@ -15,7 +15,7 @@ export class ApiDogService {
 
   }
   getDogs(): Observable<Dog[]>{
-    return this.http.get<Dog[]>(`${environment.apiUrl}/`)
+    return this.http.get<Dog[]>(`${environment.apiUrl}getDogs`)
     .pipe(
       catchError( (err) =>{
         alert('Ocurrió un error')
@@ -25,7 +25,7 @@ export class ApiDogService {
   }
   addDog (dog: Dog): Observable<Dog> {
     console.log(dog)
-    return this.http.post<Dog>(`${environment.apiUrl}/`, dog)
+    return this.http.post<Dog>(`${environment.apiUrl}addDog`, dog)
     .pipe(
       catchError( (err) =>{
         alert('Ocurrió un error')

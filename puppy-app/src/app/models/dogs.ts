@@ -2,7 +2,7 @@ export interface Dog{
     id?:number;
     name:string;
     age:number;
-    sex:string;
+    genre:string;
     description:string;
     imgUrl:string;
 }
