@@ -3,14 +3,14 @@
         <div class="col-md-4">
             <div class="card p-3 mt-5">
                 <h5 class="card-title">Registrarse</h5>
-                <form [formGroup]="signUpForm" (ngSubmit)="onSign()">
-                    <input type="text" placeholder="Nombre" formControlName="name" class="w-100 p-1 form-control mb-3" />
+                <form [formGroup]="signUpForm" (ngSubmit)="submitData()">
+                    <input type="text" placeholder="Nombre" formControlName="firstName" class="w-100 p-1 form-control mb-3" />
                     <input type="text" placeholder="Apellido" formControlName="lastName" 
                     class="w-100 p-1 form-control mb-3" />
                     <input type="text" placeholder="e-mail" formControlName="email" class="w-100 p-1 form-control mb-3" />
                     <input type="password" placeholder="password" formControlName="password"
                     class="w-100 p-1 form-control mb-3" />
-                        <input type="password" placeholder="Confirmar password" formControlName="confirmPassword"
+                        <input type="password" placeholder="Confirmar password" formControlName="validatePassword"
                         class="w-100 p-1 form-control mb-3" />
                     <button class="btn btn-primary mt-2 w-100">Registrarse</button>
                 </form>

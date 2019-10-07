@@ -13,11 +13,11 @@ export class CreatePersonComponent implements OnInit {
 
   
   signUpForm: FormGroup = new FormGroup({
-    email: new FormControl('', [Validators.email, Validators.required]),
-    name: new FormControl('',Validators.required),
-    lastName: new FormControl('',Validators.required),
-    password: new FormControl('', Validators.required),
-    confirmPassword: new FormControl('', Validators.required)
+    firstName: new FormControl('cris',Validators.required),
+    lastName: new FormControl('hum',Validators.required),
+    email: new FormControl('cris@hum.com', [Validators.email, Validators.required]),
+    password: new FormControl('123456', Validators.required),
+    validatePassword: new FormControl('123456', Validators.required)
   });
 
   constructor(private route: Router,private api:ApiDogService ) { }
@@ -26,9 +26,15 @@ export class CreatePersonComponent implements OnInit {
     // this.loginForm.setValue({ ...this.loginForm.value, email: "cri@hotm.com" });
   }
    private submitData(signUpForm:User){
-    this.api.createUser(signUpForm).subscribe(()=>{
-      this.route.navigate(['login'])
-    })
+     if(this.signUpForm.valid){
+       console.log(this.signUpForm.value);
+       this.api.createUser(signUpForm).subscribe(()=>{
+         this.route.navigateByUrl('');
+       })
+     } else {
+       alert("Missing data");
+     }
+
    }
  
 

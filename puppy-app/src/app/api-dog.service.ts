@@ -41,6 +41,7 @@ export class ApiDogService {
   }
 
   createUser(user:User){
-    return this.http.post<User>(`${environment.apiUrl}/user`,user)
+    return this.http.post<User>(`http://localhost:5000/api/user`, user)
+    // return this.http.post<User>('http://localhost:5000/api/user');
   }
 }

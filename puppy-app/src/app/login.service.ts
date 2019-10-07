@@ -8,11 +8,11 @@ import {Observable} from 'rxjs'
 export class LoginService{
     constructor(private http:HttpClient){}
     login(credentials:object){
-        this.http.post('/login',credentials).subscribe((token:string) =>{
-            localStorage.setItem('auth',token);
-        });
+        // this.http.post('http://localhost:5000/api/user/login',credentials).subscribe((obj:object) =>{
+        //     localStorage.setItem('auth', JSON.stringify(obj.data.token));
+        // });
 
-        return this.http.post('/login',credentials);
+         return this.http.post('http://localhost:5000/api/user/login',credentials);
     }
     isLoggedIn(){
         const token = localStorage.getItem('auth');
