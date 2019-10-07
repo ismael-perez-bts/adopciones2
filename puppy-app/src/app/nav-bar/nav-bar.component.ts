@@ -18,4 +18,8 @@ export class NavBarComponent implements OnInit {
     this.router.navigateByUrl('login');
   }
 
+  hasToken():boolean{
+    return !!localStorage.getItem('auth');
+  }
+
 }
