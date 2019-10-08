@@ -1,4 +1,5 @@
 <div class="containersas text-center">
+    <h2 class="mt-4" *ngIf="hasDogs()">No hay perros disponibles :)</h2>
     <div class="row mt-5">
         <div class="col-md-4" *ngFor="let dog of dogs$.data; let i = index">
             <app-perro [dog]="dog" (propagar)="elimi($event)"></app-perro>

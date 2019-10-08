@@ -29,4 +29,8 @@ export class PerrosComponent implements OnInit {
   ngOnInit() {
   }
 
+  hasDogs(){
+    return this.dogs$.data.length<1
+  }
+
 }

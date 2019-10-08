@@ -1,14 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+body, html{
+    background-attachment: center;
+    height: 100%;
+    width: 100%;
     font-family: 'Open Sans';
     color:white;
     padding-top: 50px;
     background:url('https://www.wallpaperup.com/uploads/wallpapers/2018/06/09/1268325/aff7b4587618ecfc8bf9e4d0154aeb51.jpg') no-repeat;
     background-size: cover;
-}
-@media (max-width:1024px){
-    
+    background-color: #000;
 }

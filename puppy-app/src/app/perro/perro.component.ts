@@ -23,7 +23,6 @@ export class PerroComponent implements OnInit {
 
   eliminar(dog:Dog):void{
     this.dogservice.deleteDogs(dog).subscribe((obj:object)=>{
-      (obj)
       this.propagar.emit('algodon');
     });
    
